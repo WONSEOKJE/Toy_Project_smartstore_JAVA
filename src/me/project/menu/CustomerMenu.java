@@ -35,10 +35,10 @@ public class CustomerMenu extends Menu {
                 }
             } catch (NumberFormatException e) {
                 System.out.print("유효하지 않은 입력입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             } catch (NumberRangeException e) {
                 System.out.print("유효하지 않은 범위의 숫자입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             }
         }
     }
@@ -70,7 +70,7 @@ public class CustomerMenu extends Menu {
         while (true) {
             try {
                 System.out.println("");
-                System.out.println("** Press -1, if you want to exit! ** ");
+                System.out.println("** 0을 입력하시면 이전으로 돌아갑니다! ** ");
                 System.out.println("몇 명의 고객을 추가하시겠습니까? ");
                 int size = Integer.parseInt(sc.next());
                 if (size < 0) {
@@ -79,10 +79,10 @@ public class CustomerMenu extends Menu {
                 return size;
             } catch (NumberFormatException e) {
                 System.out.println("유효하지 않은 입력입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             } catch (InputRangeException e) {
                 System.out.print("유효하지 않은 범위의 숫자입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             }
         }
     }
@@ -107,10 +107,10 @@ public class CustomerMenu extends Menu {
                 }
             } catch (NumberFormatException e) {
                 System.out.println("유효하지 않은 입력입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             } catch (InputRangeException e) {
                 System.out.print("유효하지 않은 범위의 숫자입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             }
         }
     }
@@ -175,9 +175,10 @@ public class CustomerMenu extends Menu {
                 throw new EmptyInputException();
             } catch (InputFormatException e) {
                 System.out.println("올바르지 않은 형식입니다. 다시 입력하세요.");
-                sc.next();
+                sc.nextLine();
             } catch (EmptyInputException e) {
                 System.out.println("아무것도 입력하지 않았습니다. 다시 입력하세요.");
+                sc.nextLine();
             }
         }
     }
@@ -199,9 +200,10 @@ public class CustomerMenu extends Menu {
                 throw new EmptyInputException();
             } catch (InputFormatException e) {
                 System.out.println("올바르지 않은 형식입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             } catch (EmptyInputException e) {
                 System.out.println("아무것도 입력하지 않았습니다. 다시 입력하세요.\n");
+                sc.nextLine();
             }
         }
     }
@@ -220,9 +222,10 @@ public class CustomerMenu extends Menu {
                 return;
             } catch (NumberFormatException e) {
                 System.out.println("올바르지 않은 형식입니다. 다시 입력하세요.");
-                sc.next();
+                sc.nextLine();
             } catch (NumberRangeException e) {
                 System.out.print("유효하지 않은 범위의 숫자입니다. 다시 입력하세요.\n");
+                sc.nextLine();
             }
         }
     }
@@ -241,9 +244,10 @@ public class CustomerMenu extends Menu {
                 return;
             } catch (NumberFormatException e) {
                 System.out.println("올바르지 않은 형식입니다. 다시 입력하세요.");
-                sc.next();
+                sc.nextLine();
             } catch (NumberRangeException e) {
                 System.out.print("유효하지 않은 범위의 숫자입니다. 다시 입력하세요.\n");
+                sc.nextLine();
             }
         }
     }
@@ -272,7 +276,7 @@ public class CustomerMenu extends Menu {
                 return choice;
             } catch (NumberFormatException e) {
                 System.out.print("유효하지 않은 입력입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             }
         }
     }
