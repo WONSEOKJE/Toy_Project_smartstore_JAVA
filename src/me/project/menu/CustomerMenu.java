@@ -261,6 +261,7 @@ public class CustomerMenu extends Menu {
                 System.out.println("null");
             }
         }
+        System.out.println("=====================");
     }
 
     public static int findCustomer (int custcount) { //수정 또는 삭제하고 싶은 고객 번호를 입력받고 리턴하는 메소드
@@ -321,9 +322,13 @@ public class CustomerMenu extends Menu {
         viewCustomerData();
         int custNo = findCustomer(custcount);
         if (custNo >= 1 && custNo <= custcount) {
+            System.out.println("===================================");
+            System.out.println("          삭제된 고객 정보");
+            System.out.println("===================================");
             System.out.println(Customers.getInstance().pop(custNo - 1));
-
+            System.out.println("-----------------------------------");
             System.out.println("고객 정보가 성공적으로 삭제되었습니다 !");
+            System.out.println("===================================");
             viewCustomerData();
         }
         else
