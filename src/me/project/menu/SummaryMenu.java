@@ -36,10 +36,10 @@ public class SummaryMenu extends Menu{
                 }
             } catch (NumberFormatException e) {
                 System.out.print("유효하지 않은 입력입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             } catch (NumberRangeException e) {
                 System.out.print("유효하지 않은 범위의 숫자입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             }
         }
     }
@@ -128,10 +128,10 @@ public class SummaryMenu extends Menu{
                 throw new InputRangeException();
             } catch (EmptyInputException e) {
                 System.out.print("아무것도 입력하지 않았습니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             } catch (InputRangeException e) {
                 System.out.println("잘못입력하셨습니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             }
         }
     }
