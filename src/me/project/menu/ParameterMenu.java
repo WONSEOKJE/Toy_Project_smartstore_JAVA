@@ -20,7 +20,7 @@ public class ParameterMenu extends Menu{
         while(true) {
             try {
                 System.out.println();
-                System.out.println("** 'end'를 입력하시면 이전으로 돌아갑니다. **");
+                System.out.println("** 'end'를 입력하시면 이전으로 돌아갑니다! **");
                 System.out.print("어떤 그룹을 선택하시겠습니까 (GENERAL, VIP, VVIP) ? : ");
                 String choice = sc.next().toUpperCase();
                 if (choice.equals("")) {
@@ -36,10 +36,10 @@ public class ParameterMenu extends Menu{
                 throw new InputRangeException();
             }  catch (EmptyInputException e) {
                 System.out.print("아무것도 입력하지 않았습니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             } catch (InputRangeException e) {
                 System.out.println("잘못입력하셨습니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             }
         }
     }
@@ -62,10 +62,10 @@ public class ParameterMenu extends Menu{
                 }
             } catch (NumberFormatException e) {
                 System.out.print("유효하지 않은 입력입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             } catch (NumberRangeException e) {
                 System.out.print("유효하지 않은 범위의 숫자입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             }
         }
     }
@@ -121,10 +121,10 @@ public class ParameterMenu extends Menu{
                 }
             } catch (NumberFormatException e) {
                 System.out.print("유효하지 않은 입력입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             } catch (NumberRangeException e) {
                 System.out.print("유효하지 않은 범위의 숫자입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             }
             group.setParameter(parameter);
             Groups.getInstance().add(group);
@@ -144,10 +144,10 @@ public class ParameterMenu extends Menu{
                 return;
             } catch (NumberFormatException e) {
                 System.out.print("유효하지 않은 입력입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             }  catch (InputRangeException e) {
                 System.out.println("유효하지 않은 값입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             }
         }
     }
@@ -164,10 +164,10 @@ public class ParameterMenu extends Menu{
                 return;
             } catch (InputMismatchException e) {
                 System.out.print("유효하지 않은 입력입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             } catch (InputRangeException e) {
                 System.out.println("유효하지 않은 값입니다. 다시 입력하세요.\n");
-                sc.next();
+                sc.nextLine();
             }
         }
     }
@@ -212,10 +212,10 @@ public class ParameterMenu extends Menu{
                     }
                 } catch (NumberFormatException e) {
                     System.out.print("유효하지 않은 입력입니다. 다시 입력하세요.\n");
-                    sc.next();
+                    sc.nextLine();
                 } catch (NumberRangeException e) {
                     System.out.print("유효하지 않은 범위의 숫자입니다. 다시 입력하세요.\n");
-                    sc.next();
+                    sc.nextLine();
                 }
                 updategroup.setParameter(parameter);
                 Customers.getInstance().refresh(Groups.getInstance());
